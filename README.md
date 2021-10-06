@@ -29,13 +29,22 @@ App\Providers\MenuServiceProvider::class,
 ## Usage
 
 Set an active menu:
-```
+```php
 app('App\Classes\Menu\MenuFactory')->setActive('name')
 ```
 
 With the following code you can render the word "active" if name corresponse to the active menu.
-```
+```php
 app('App\Classes\Menu\MenuFactory')->renderActive('name')
+```
+
+I am working on facades to use.
+
+If you dont want to set the active menu in the controller, there is also an middleware you can use.
+```php
+Route::put('/post/{id}', function ($id) {
+    //
+})->middleware('menu:blog');
 ```
 
 
