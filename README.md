@@ -42,7 +42,7 @@ I am working on facades to use.
 
 If you dont want to set the active menu in the controller, there is also an middleware you can use.
 ```php
-Route::put('/post/{id}', function ($id) {
+Route::get('/post/{id}', function ($id) {
     //
 })->middleware('menu:blog');
 ```
