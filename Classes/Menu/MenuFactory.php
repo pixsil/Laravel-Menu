@@ -1,37 +1,55 @@
 <?php
 
-// version 3
+// verion 1
 
-namespace App\Providers;
+Namespace App\Classes\Menu;
 
-use App\Classes\Menu\MenuFactory;
-use Illuminate\Support\ServiceProvider;
+/**
+ * Menu factory
+ */
+class MenuFactory {
 
-class MenuServiceProvider extends ServiceProvider
-{
-    protected $defer = true;
+    private $active_menu = null;
 
-    /**
-     * Bootstrap services.
-     *
-     * @return void
-     */
-    public function boot()
+    // // the object is created from within the class itself
+    // // only if the class has no instance.
+    // public static function getInstance()
+    // {
+    //     // if already there
+    //     if (self::$instance == null) {
+    //         self::$instance = new MenuFactory();
+    //     }
+
+    //     return self::$instance;
+    // }
+
+    //
+    public function setActive($active_menu)
     {
-        //
+        // set active menu
+        $this->active_menu = $active_menu;
+
+        // void
+        return;
     }
 
-    /**
-     * Register services.
-     *
-     * @return void
-     */
-    public function register()
+    //
+    public function getActive()
     {
-        //
-        $this->app->singleton(MenuFactory::class, function () {
+        return $this->active_menu ?? null;
+    }
 
-            return new MenuFactory();
-        });
+    //
+    public function renderActive($menu)
+    {
+        // init
+        $class = '';
+
+        // set active menu
+        if ($this->active_menu === $menu) {
+            $class = 'active';
+        }
+
+        return $class;
     }
 }
