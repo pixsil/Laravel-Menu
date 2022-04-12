@@ -1,11 +1,7 @@
 # Laravel-Menu
 An awesome Laravel menu service provider
 
-This documentation is not yet finished.
-
-## What is it?
-
-..
+This package adds an Menu service provider to your Laravel application. Easy to use, easy to extend.
 
 ## Donate
 
@@ -49,12 +45,3 @@ Route::get('/post/{id}', function ($id) {
     //
 })->middleware('menu:blog');
 ```
-
-
-## Additional knowledge
-
-..
-
-## Example
-
-..
