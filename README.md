@@ -25,6 +25,13 @@ Then add the following line to your config/app.php
 App\Providers\MenuServiceProvider::class,
 ```
 
+For the middleware to work, add the following to $routeMiddleware in Http/Kernel.php:
+
+```php
+'menu' => \App\Http\Middleware\MenuMiddleware::class,
+```
+
+
 ## Usage
 
 Set an active menu:
