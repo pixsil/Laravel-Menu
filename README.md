@@ -17,7 +17,10 @@ https://www.patreon.com/pixsil
 
 For a quick install, run this from your project root:
 ```bash
-..
+mkdir -p App/Classes/Menu
+wget -O App/Classes/Menu/MenuFactory.php https://raw.githubusercontent.com/pixsil/Laravel-Menu/main/Classes/Menu/MenuFactory.php
+wget -O App/Http/Middleware/MenuMiddleware.php https://raw.githubusercontent.com/pixsil/Laravel-Menu/main/Http/Middleware/MenuMiddleware.php
+wget -O App/Providers/MenuServiceProvider.php https://raw.githubusercontent.com/pixsil/Laravel-Menu/main/Providers/MenuServiceProvider.php
 ```
 
 Then add the following line to your config/app.php
