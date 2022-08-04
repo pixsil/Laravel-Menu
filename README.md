@@ -46,7 +46,7 @@ Route::get('/post/{id}', function ($id) {
 
 With the following code you can render the word "active" if name corresponse to the active menu.
 ```php
-app(MenuFactory::class)->renderActive('name')
+app('App\Classes\Menu\MenuFactory')->renderActive('name')
 ```
 
 ### Set per controller
