@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Classes\Menu\MenuFactory;
 use Closure;
 
 class MenuMiddleware
@@ -16,7 +17,7 @@ class MenuMiddleware
      */
     public function handle($request, Closure $next, $role, $menu)
     {
-        app('App\Classes\Menu\MenuFactory')->renderActive($menu);
+        app(MenuFactory::class)->renderActive($menu);
 
         return $next($request);
     }
