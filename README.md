@@ -51,10 +51,25 @@ app(MenuFactory::class)->renderActive('name')
 
 ### Set per controller
 
-You can use the following function to set the active menu from the controller:
+You can use the following function will renders 'active' if the given name is active.
 
 ```php
 app(MenuFactory::class)->setActive('name');
+```
+
+## Example
+
+This is how it looks like in your blade file:
+
+```html
+<ul class="menu">
+    <li class="menu-item {{ app(MenuFactory::class)->renderActive('blog') }}">
+        <a href="#">Blog</a>
+    </li>
+    <li class="menu-item {{ app(MenuFactory::class)->renderActive('news') }}">
+        <a href="#">News</a>
+    </li>
+</ul>
 ```
 
 ## Extend ideas
