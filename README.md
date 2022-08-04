@@ -56,3 +56,7 @@ You can use the following function to set the active menu from the controller:
 ```php
 app(MenuFactory::class)->setActive('name');
 ```
+
+## Extend ideas
+
+Is it nice to create a facade for this?
