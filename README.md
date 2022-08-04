@@ -34,9 +34,14 @@ For the middleware to work, add the following to $routeMiddleware in Http/Kernel
 
 ## Usage
 
-Set an active menu:
+You can set the active menu with a route middleware or in the controller. See for the controller configuration below.
+
+This is how you set the active menu with in the route file:
+
 ```php
-app(MenuFactory::class)->setActive('name');
+Route::get('/post/{id}', function ($id) {
+    //
+})->middleware('menu:blog');
 ```
 
 With the following code you can render the word "active" if name corresponse to the active menu.
@@ -44,11 +49,10 @@ With the following code you can render the word "active" if name corresponse to 
 app(MenuFactory::class)->renderActive('name')
 ```
 
-I am working on facades to use.
+### Set per controller
 
-If you dont want to set the active menu in the controller, there is also an middleware you can use.
+You can use the following function to set the active menu from the controller:
+
 ```php
-Route::get('/post/{id}', function ($id) {
-    //
-})->middleware('menu:blog');
+app(MenuFactory::class)->setActive('name');
 ```
