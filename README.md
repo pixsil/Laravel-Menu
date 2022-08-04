@@ -36,12 +36,12 @@ For the middleware to work, add the following to $routeMiddleware in Http/Kernel
 
 Set an active menu:
 ```php
-app('App\Classes\Menu\MenuFactory')->setActive('name');
+app(MenuFactory::class)->setActive('name');
 ```
 
 With the following code you can render the word "active" if name corresponse to the active menu.
 ```php
-app('App\Classes\Menu\MenuFactory')->renderActive('name')
+app(MenuFactory::class)->renderActive('name')
 ```
 
 I am working on facades to use.
