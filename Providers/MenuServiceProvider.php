@@ -1,6 +1,6 @@
 <?php
 
-// version 3
+// version 4
 
 namespace App\Providers;
 
@@ -29,8 +29,7 @@ class MenuServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        $this->app->singleton(MenuFactory::class, function () {
-
+        $this->app->singleton('menu', function () {
             return new MenuFactory();
         });
     }
