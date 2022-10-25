@@ -25,6 +25,12 @@ Then add the following line to your config/app.php
 App\Providers\MenuServiceProvider::class,
 ```
 
+Add below this file by alliases:
+
+```php
+'Menu' => \App\Facades\MenuFacade::class,
+```
+
 For the middleware to work, add the following to $routeMiddleware in Http/Kernel.php:
 
 ```php
