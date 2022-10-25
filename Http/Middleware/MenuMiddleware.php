@@ -17,7 +17,7 @@ class MenuMiddleware
      */
     public function handle($request, Closure $next, $role, $menu)
     {
-        app(MenuFactory::class)->setActive($menu);
+        \Menu::setActive($menu);
 
         return $next($request);
     }
