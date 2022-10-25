@@ -60,7 +60,11 @@ app('App\Classes\Menu\MenuFactory')->renderActive('name')
 You can use the following function will renders 'active' if the given name is active.
 
 ```php
-app(MenuFactory::class)->setActive('name');
+// in a php
+/Menu::setActive('name');
+
+// in a view
+Menu::renderActive('name');
 ```
 
 ## Example
