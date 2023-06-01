@@ -75,10 +75,10 @@ This is how it looks like in your blade file:
 
 ```html
 <ul class="menu">
-    <li class="menu-item {{ app(MenuFactory::class)->renderActive('blog') }}">
+    <li class="menu-item {{ Menu::getActive('blog') }}">
         <a href="#">Blog</a>
     </li>
-    <li class="menu-item {{ app(MenuFactory::class)->renderActive('news') }}">
+    <li class="menu-item {{ Menu::getActive('news') }}">
         <a href="#">News</a>
     </li>
 </ul>
