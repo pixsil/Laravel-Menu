@@ -84,6 +84,4 @@ This is how it looks like in your blade file:
 </ul>
 ```
 
-## Extend ideas
 
-Is it nice to create a facade for this?
